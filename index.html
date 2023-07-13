@@ -24,8 +24,9 @@
                     <h1>Todo</h1>
                 </span>
                 <div id="todo-content">
-                    <ul class="drag-item-list" id="todo-list">
-                        <li class="drag-item">Test</li>
+                    <ul class="drag-item-list" id="todo-list" ondragover="allowDrop(event)" ondragenter="dragEnter(0)"
+                        ondrop="drop(event)">
+
 
                     </ul>
                 </div>
@@ -33,12 +34,12 @@
                     <div class="add-item" contenteditable="true"></div>
                 </div>
                 <div class="add-btn-group">
-                    <div class="add-btn">
+                    <div class="add-btn" onclick="showItemDiv(0)">
                         <span class="plus-span">
                             +
                         </span>
                     </div>
-                    <div class="add-btn update">
+                    <div class="add-btn update" onclick="hideItemDiv(0)">
                         <span>Kaydet</span>
                     </div>
                 </div>
@@ -46,26 +47,24 @@
             <!--InProgress-->
             <li class="drag-column progress-column">
                 <span class="header">
-                    <h1>Todo</h1>
+                    <h1>In Progress</h1>
                 </span>
                 <div id="progress-content">
-                    <ul class="drag-item-list" id="progress-list">
-                        <li class="drag-item">Test</li>
-                        <li class="drag-item">Test</li>
-                        <li class="drag-item">Test</li>
-                        <li class="drag-item">Test</li>
+                    <ul class="drag-item-list" id="progress-list" ondragover="allowDrop(event)"
+                        ondragenter="dragEnter(1)" ondrop="drop(event)">
+
                     </ul>
                 </div>
                 <div class="add-container">
                     <div class="add-item" contenteditable="true"></div>
                 </div>
                 <div class="add-btn-group">
-                    <div class="add-btn">
+                    <div class="add-btn" onclick="showItemDiv(1)">
                         <span class="plus-span">
                             +
                         </span>
                     </div>
-                    <div class="add-btn update">
+                    <div class="add-btn update" onclick="hideItemDiv(1)">
                         <span>Kaydet</span>
                     </div>
                 </div>
@@ -73,26 +72,24 @@
             <!--Done-->
             <li class="drag-column done-column">
                 <span class="header">
-                    <h1>Todo</h1>
+                    <h1>Done</h1>
                 </span>
                 <div id="done-content">
-                    <ul class="drag-item-list" id="done-list">
-                        <li class="drag-item">Test</li>
-                        <li class="drag-item">Test</li>
+                    <ul class="drag-item-list" id="done-list" ondragover="allowDrop(event)" ondragenter="dragEnter(2)"
+                        ondrop="drop(event)">
 
-                        <li class="drag-item">Test</li>
                     </ul>
                 </div>
                 <div class="add-container">
                     <div class="add-item" contenteditable="true"></div>
                 </div>
                 <div class="add-btn-group">
-                    <div class="add-btn">
+                    <div class="add-btn" onclick="showItemDiv(2)">
                         <span class="plus-span">
                             +
                         </span>
                     </div>
-                    <div class="add-btn update">
+                    <div class="add-btn update" onclick="hideItemDiv(2)">
                         <span>Kaydet</span>
                     </div>
                 </div>
